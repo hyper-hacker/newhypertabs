@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang='en' class='dark-theme'>
-
+<!-- https://github.com/BinBashBanana/Hypertabs-EX-Heroku -->
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -1207,7 +1207,7 @@ html {
         if (document.getElementById('urlbar').value === '') {
           alert('Please insert frame URL');
         } else if (!document.getElementById('urlbar').value.includes('http')) {
-          value = "https://" + location.host + "/service/" + encodeURI("http://" + document.getElementById('urlbar').value);
+          value = "https://" + location.host + "/service/" + encodeURI("https://" + document.getElementById('urlbar').value);
           document.getElementById(getActiveFrameId()).src = value;
         } else {
           value = "https://" + location.host + "/service/" + encodeURI(document.getElementById('urlbar').value);

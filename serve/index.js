@@ -1,14 +1,12 @@
-const https = require('https');
+const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const ssl = {
-    key: fs.readFileSync(path.join(__dirname, '/ssl.key')),
-    cert: fs.readFileSync(path.join(__dirname, '/ssl.cert')),
-};
-const server = https.createServer(ssl);
+const server = http.createServer();
 const Corrosion = require('../');
 const proxy = new Corrosion({
     codec: 'plain',
+    prefix: '/service/',
+    forceHttps: true
 });
 
 proxy.bundleScripts();
@@ -16,4 +14,4 @@ proxy.bundleScripts();
 server.on('request', (request, response) => {
     if (request.url.startsWith(proxy.prefix)) return proxy.request(request, response);
     response.end(fs.readFileSync(__dirname + '/index.html', 'utf-8'));
-}).on('upgrade', (clientRequest, clientSocket, clientHead) => proxy.upgrade(clientRequest, clientSocket, clientHead)).listen(80);
+}).on('upgrade', (clientRequest, clientSocket, clientHead) => proxy.upgrade(clientRequest, clientSocket, clientHead)).listen(process.env.PORT || 7070); // we have to listen at a higher port because heroku
