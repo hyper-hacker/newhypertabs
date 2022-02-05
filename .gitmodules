@@ -1,0 +1,3 @@
+[submodule "serve/public/gfiles"]
+	path = serve/public/gfiles
+	url = https://github.com/BinBashBanana/gfiles
