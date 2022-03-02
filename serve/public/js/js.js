@@ -110,6 +110,11 @@ function openMenu(...x) {
     elems.forEach((elm) => hideId(elm.id));
   }
 }
+function Fullscreen() {
+  let pageurl = 
+    document.getElementById(getActiveFrameId()).contentWindow.location.href
+  window.open(pageurl);
+}
 function inspect() {
   (function () { var script = document.createElement('script'); script.src = 'js/inspect.js'; script.className = 'webxray'; script.setAttribute('data-lang', 'en-US'); script.setAttribute('data-baseuri', 'https://x-ray-goggles.mouse.org'); document.body.appendChild(script); }())
 }
