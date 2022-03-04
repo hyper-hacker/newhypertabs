@@ -19,6 +19,8 @@ const proxy = new corrosion({
 });
 proxy.bundleScripts();
 
+
+
 app.use(express.static(path.join(__dirname, '/public')));
 app.use((req, res) => {
     if (req.url.startsWith(proxy.prefix)) return proxy.request(req, res);
@@ -28,3 +30,4 @@ server.on('upgrade', (clientRequest, clientSocket, clientHead) => proxy.upgrade(
 
 server.listen(port);
 console.log('Listening on port ' + port);
+

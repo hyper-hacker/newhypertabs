@@ -70,6 +70,10 @@ function action(a) {
     alert('Please insert a URL');
   } else if (!value.value.startsWith('http')) {
     value.value = "https://" + value.value;
+
+    
+
+    
     let b64URL = getUrl();
     document.getElementById(getActiveFrameId()).src = "/service/" + getUrl();
   } else {
@@ -115,9 +119,78 @@ function Fullscreen() {
     document.getElementById(getActiveFrameId()).contentWindow.location.href
   window.open(pageurl);
 }
-function inspect() {
-  (function () { var script = document.createElement('script'); script.src = 'js/inspect.js'; script.className = 'webxray'; script.setAttribute('data-lang', 'en-US'); script.setAttribute('data-baseuri', 'https://x-ray-goggles.mouse.org'); document.body.appendChild(script); }())
+function inspectelement() {
+let pageurl = 
+    document.getElementById(getActiveFrameId()).contentWindow.location.href
+
+let lastletter = pageurl.slice(-1);
+
+if (lastletter == '/') {
+
+let pageurl = 
+    document.getElementById(getActiveFrameId()).contentWindow.location.href
+  pageurl = pageurl.substring(0, pageurl.length - 1);
+let inspecturl = pageurl + '?' + 'inspectelement' ; 
+    console.log(inspecturl);
+  document.getElementById('2').contentWindow.location.replace(inspecturl)
+
+
 }
+
+else {
+
+
+let pageurl = 
+    document.getElementById(getActiveFrameId()).contentWindow.location.href
+
+let inspecturl = pageurl + '?' + 'inspectelement' ; 
+    console.log(inspecturl);
+  document.getElementById('2').contentWindow.location.replace(inspecturl)
+}
+
+
+
+  
+}
+
+
+function inspect() {
+let pageurl = 
+    document.getElementById(getActiveFrameId()).contentWindow.location.href
+
+let lastletter = pageurl.slice(-1);
+
+if (lastletter == '/') {
+
+let pageurl = 
+    document.getElementById(getActiveFrameId()).contentWindow.location.href
+  pageurl = pageurl.substring(0, pageurl.length - 1);
+let inspecturl = pageurl + '?' + 'inspect' ; 
+    console.log(inspecturl);
+  document.getElementById('2').contentWindow.location.replace(inspecturl)
+
+
+}
+
+else {
+
+
+let pageurl = 
+    document.getElementById(getActiveFrameId()).contentWindow.location.href
+
+let inspecturl = pageurl + '?' + 'inspect' ; 
+    console.log(inspecturl);
+  document.getElementById('2').contentWindow.location.replace(inspecturl)
+}
+
+
+
+  
+}
+
+
+
+
 function opencity(a) {
   tc = document.getElementsByClassName('iframething');
   for (ii = 0; ii < tc.length; ii++) {
@@ -173,6 +246,9 @@ newTab = (url) => {
     title: 'New Hypertab',
     favicon: 'favicon.ico'
   });
+
+
+  
   document.getElementById('urlbar').value = url;
   var uwu = i++;
   var frame = document.createElement('IFRAME');
