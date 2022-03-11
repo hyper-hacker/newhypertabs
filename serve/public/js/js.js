@@ -153,6 +153,7 @@ let inspecturl = pageurl + '?' + 'inspectelement' ;
   
 }
 
+//geforce now redirection code. 
 
 function inspect() {
 let pageurl = 

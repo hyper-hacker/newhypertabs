@@ -13,6 +13,9 @@ if (newvalue == 'inspect') {
   
 }
 
+            if(window.location.href.indexOf("play.geforcenow.com") > -1) 
+            {
+                 alert("you are on geforce now");
+            }
 
-
-//bundle.js
+//bundle.js AND document 
