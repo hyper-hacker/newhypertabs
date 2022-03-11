@@ -2,7 +2,7 @@
 Hypertabs-EX is a reverse engineer of [https://titaniumnetwork.org/](https://titaniumnetwork.org) with the backend of [Corrosion-Heroku](https://github.com/BinBashBanana/Corrosion-Heroku). This Corrosion-Heroku instance is modified to support HTML5Tabs.
 
 [![Deploy to Heroku](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/hyper-hacker/newhypertabs/tree/Heroku)
-[![Run on Replit](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/replit.svg)](https://replit.com/github/hyper-hacker/newhypertabs)
+[![Run on Replit](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/replit.svg)](https://replit.com/github/hyper-hacker/newhypertabs/tree/Heroku)
 
 
 ## Run
