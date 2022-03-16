@@ -119,41 +119,15 @@ function Fullscreen() {
     document.getElementById(getActiveFrameId()).contentWindow.location.href
   window.open(pageurl);
 }
-function inspectelement() {
-let pageurl = 
-    document.getElementById(getActiveFrameId()).contentWindow.location.href
-
-let lastletter = pageurl.slice(-1);
-
-if (lastletter == '/') {
-
-let pageurl = 
-    document.getElementById(getActiveFrameId()).contentWindow.location.href
-  pageurl = pageurl.substring(0, pageurl.length - 1);
-let inspecturl = pageurl + '?' + 'inspectelement' ; 
-    console.log(inspecturl);
-  document.getElementById('2').contentWindow.location.replace(inspecturl)
-
-
-}
-
-else {
-
-
-let pageurl = 
-    document.getElementById(getActiveFrameId()).contentWindow.location.href
-
-let inspecturl = pageurl + '?' + 'inspectelement' ; 
-    console.log(inspecturl);
-  document.getElementById('2').contentWindow.location.replace(inspecturl)
-}
 
 
 
+function infinitecookies() {
+
+  document.getElementById('2').contentWindow.location.replace("/gfiles/Cookie_Clicker_App/index.html?infcookies")
   
 }
 
-//geforce now redirection code. 
 
 function inspect() {
 let pageurl = 

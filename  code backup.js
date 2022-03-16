@@ -1,3 +1,14 @@
+if(window.location.href.indexOf("cookieclicker") > -1) 
+            {
+                 alert("you are on cookie clicker");
+              window.location.href = "/gfiles/Cookie_Clicker_App/";
+            }
+if(window.location.href.indexOf("cookie-clicker") > -1) 
+            {
+                 alert("you are on cookie clicker");
+              window.location.href = "/gfiles/Cookie_Clicker_App/";
+            }
+
 let url = window.location.href
 let str = url;
 
